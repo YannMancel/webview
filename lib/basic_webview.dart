@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart' as web_view;
 
-class BasicWebViewWidget extends StatefulWidget {
-  const BasicWebViewWidget({Key? key}) : super(key: key);
+class BasicWebView extends StatefulWidget {
+  const BasicWebView({Key? key}) : super(key: key);
 
   @override
-  State<BasicWebViewWidget> createState() => _BasicWebViewWidgetState();
+  State<BasicWebView> createState() => _BasicWebViewState();
 }
 
-class _BasicWebViewWidgetState extends State<BasicWebViewWidget> {
+class _BasicWebViewState extends State<BasicWebView> {
   late web_view.WebViewController _controller;
 
   @override
