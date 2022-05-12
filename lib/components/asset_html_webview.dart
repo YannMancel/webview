@@ -15,7 +15,7 @@ class AssetHtmlWebView extends StatefulWidget {
 class _AssetHtmlWebViewState extends State<AssetHtmlWebView> {
   late web_view.WebViewController _controller;
 
-  Future<void> _loadLocalHtml() async {
+  Future<void> _loadAssetHtml() async {
     final html = await rootBundle.loadString('assets/use_case_1/index.html');
 
     final url = Uri.dataFromString(
@@ -42,7 +42,7 @@ class _AssetHtmlWebViewState extends State<AssetHtmlWebView> {
       javascriptMode: web_view.JavascriptMode.unrestricted,
       onWebViewCreated: (controller) {
         _controller = controller;
-        _loadLocalHtml();
+        _loadAssetHtml();
       },
     );
   }

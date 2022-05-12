@@ -13,6 +13,7 @@
 ## Dependencies
 * Web View
     * [webview_flutter][1]
+    * [webview_flutter_plus][2]
 
 ## Troubleshooting
 
@@ -27,4 +28,5 @@
 * [Enable developer options and debugging](https://developer.android.com/studio/debug/dev-options.html#enable)
 
 [1]: https://pub.dev/packages/webview_flutter
+[2]: https://pub.dev/packages/webview_flutter_plus
 

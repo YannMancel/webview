@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.4
   webview_flutter: ^3.0.4
+  webview_flutter_plus: ^0.3.0+2
 
 dev_dependencies:
   flutter_test:
@@ -22,4 +23,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/
+    - assets/use_case_1/
+    - assets/use_case_2/
