@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:webview/components/_components.dart';
 
-enum Mode { basic, localHtml, assetHtml, assetHtmlCssJs }
+enum Mode { basic, localHtml, assetHtml, assetHtmlCssJs, heatmap }
 
 class HomePage extends StatelessWidget {
   const HomePage({
     Key? key,
     required this.title,
-    this.mode = Mode.assetHtmlCssJs,
+    this.mode = Mode.heatmap,
   }) : super(key: key);
 
   final String title;
@@ -28,6 +28,9 @@ class HomePage extends StatelessWidget {
         break;
       case Mode.assetHtmlCssJs:
         widget = const AssetHtmlCssJsWebView();
+        break;
+      case Mode.heatmap:
+        widget = const HeatmapWebView();
         break;
     }
 

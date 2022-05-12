@@ -25,3 +25,4 @@ flutter:
   assets:
     - assets/use_case_1/
     - assets/use_case_2/
+    - assets/use_case_3/
