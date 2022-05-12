@@ -3,13 +3,13 @@ import 'package:webview/basic_webview.dart';
 
 import 'local_html_webview.dart';
 
-enum Mode { basic, localHtml }
+enum Mode { basic, localHtml, assetHtml }
 
 class HomePage extends StatelessWidget {
   const HomePage({
     Key? key,
     required this.title,
-    this.mode = Mode.localHtml,
+    this.mode = Mode.assetHtml,
   }) : super(key: key);
 
   final String title;
@@ -23,6 +23,9 @@ class HomePage extends StatelessWidget {
         widget = const BasicWebView();
         break;
       case Mode.localHtml:
+        widget = const LocalHtmlWebView();
+        break;
+      case Mode.assetHtml:
         widget = const LocalHtmlWebView();
         break;
     }
