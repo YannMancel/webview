@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:webview/basic_webview.dart';
-
-import 'local_html_webview.dart';
+import 'package:webview/components/_components.dart';
 
 enum Mode { basic, localHtml, assetHtml }
 
