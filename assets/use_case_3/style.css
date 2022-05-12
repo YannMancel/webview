@@ -1,0 +1,12 @@
+.container {
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #ccc;
+    background-image: url(field.png);
+    z-index: -999999
+}
+
+#canvas {
+    position: relative;
+}

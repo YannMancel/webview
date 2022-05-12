@@ -1,30 +1,31 @@
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-function get(id) {
-    return document.getElementById(id);
+function ready() {
+    // Send message to flutter app
+    JavascriptChannel.postMessage('DOM is ready');
 }
 
-var heat = simpleheat('canvas').data(data).max(18),
-    frame;
+document.addEventListener("DOMContentLoaded", ready);
 
-function draw() {
-    heat.draw();
-    frame = null;
+function setupData(data) {
+    var radius = 25;
+    var blur = 15;
+    var gradient = {
+        0.8: 'blue',
+        0.85: 'green',
+        0.90: 'yellow',
+        0.95: 'orange',
+        1: 'red'
+    };
+    var max = 18;
+
+    var heat = simpleheat('canvas')
+        .data(data)
+        .radius(radius, blur)
+        .gradient(gradient)
+        .max(max)
+        .draw();
+
+   window.requestAnimationFrame(draw);
 }
-
-draw();
-
-//get('canvas').onmousemove = function (e) {
-//    heat.add([e.layerX, e.layerY, 1]);
-//    frame = frame || window.requestAnimationFrame(draw);
-//};
-
-//var radius = get('radius'),
-//    blur = get('blur'),
-//    changeType = 'oninput' in radius ? 'oninput' : 'onchange';
-
-//radius[changeType] = blur[changeType] = function (e) {
-//    heat.radius(+radius.value, +blur.value);
-//    frame = frame || window.requestAnimationFrame(draw);
-//};
