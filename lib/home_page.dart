@@ -30,7 +30,21 @@ class HomePage extends StatelessWidget {
         widget = const AssetHtmlCssJsWebView();
         break;
       case Mode.heatmap:
-        widget = const HeatmapWebView();
+        widget = Stack(
+          fit: StackFit.expand,
+          children: const <Widget>[
+            ColoredBox(color: Colors.grey),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 50.0),
+                child: AspectRatio(
+                  aspectRatio: 16.0 / 10.4,
+                  child: HeatmapWebView(),
+                ),
+              ),
+            ),
+          ],
+        );
         break;
     }
 
