@@ -23,6 +23,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/json/
     - assets/use_case_1/
     - assets/use_case_2/
     - assets/use_case_3/

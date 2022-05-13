@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:webview/components/_components.dart';
+import 'package:webview/_features.dart';
 
 enum Mode { basic, localHtml, assetHtml, assetHtmlCssJs, heatmap }
 
